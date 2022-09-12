@@ -1,0 +1,12 @@
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 215px;
+    background: $gradient;
+    border-radius: 25px;
+    color: white;
+    margin: 0px auto;
+    box-shadow: 2px 2px 5px lightgray;
+}
