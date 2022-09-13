@@ -5,15 +5,19 @@ footer{
     height: 195px;
     color: white;
     ul{
+        display: flex;
         li{
             a{
+                width: fit-content;
                 color: white;
                 text-decoration: none;
                 p{
+                    width: fit-content;
+                    margin-bottom: 10px;
+                    margin-right: 0;
                     i{
                         margin-right: 10px;
-                    }
-                    margin-bottom: 10px;
+                    }  
                 }
             }
         }

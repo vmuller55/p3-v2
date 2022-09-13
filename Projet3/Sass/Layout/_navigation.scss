@@ -2,7 +2,14 @@
     padding-top: 60px;
     padding-bottom: 65px;
     background: #f6f6f6;
-    
+    a{
+        text-emphasis: none;
+        text-decoration: none;
+        color: inherit;
+    }
+    .DesktopText{
+        display: none;
+    }
     h1{
         margin-left: 20px;
         margin-bottom: 30px;
