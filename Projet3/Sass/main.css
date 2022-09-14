@@ -274,7 +274,7 @@ header .logo__restaurant h1 {
   border-radius: 15px;
   background: white;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 0.5fr;
   grid-template-rows: 1fr 1fr;
   position: relative;
   margin-left: 15px;
