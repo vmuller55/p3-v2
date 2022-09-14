@@ -178,6 +178,10 @@ body {
   width: 160px;
 }
 
+header .logo__restaurant h1 {
+  display: none;
+}
+
 .return {
   position: absolute;
   top: 20px;
@@ -193,7 +197,6 @@ body {
   height: 250px;
   width: 100%;
   position: relative;
-  font-weight: bolder;
 }
 
 .header {
@@ -241,6 +244,7 @@ body {
   padding-top: 30px;
   background-color: #f6f6f6;
   width: 100%;
+  padding-bottom: 10px;
 }
 .start p, .plate p, .dessert p {
   position: relative;
@@ -258,6 +262,13 @@ body {
   margin-bottom: 15px;
 }
 
+.plate, .dessert {
+  padding-top: 20px;
+}
+.plate p, .dessert p {
+  margin-top: 0px;
+}
+
 .menu {
   height: 65px;
   border-radius: 15px;
@@ -266,14 +277,17 @@ body {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   position: relative;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-bottom: 15px;
 }
 .menu h2 {
   margin-left: 10px;
   margin-top: 15px;
   font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu p {
   grid-column-start: 1;
@@ -282,6 +296,9 @@ body {
   margin-left: 10px;
   margin-top: 5px;
   padding-left: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .slide {
   grid-column-start: 2;
@@ -295,21 +312,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
+  width: 65px;
   height: 65px;
   border-radius: 0 15px 15px 0;
   position: absolute;
-  right: 80px;
-  opacity: 1;
+  right: 0;
+  opacity: 0;
   top: 0;
   background-color: #99E2D0;
-}
-.animation span {
-  margin: 0;
 }
 .animation span i {
   color: white;
   background-color: #99E2D0;
+  opacity: 0;
 }
 
 .btn {
@@ -691,20 +706,49 @@ footer h1 {
   text-align: center;
 }
 
-.menu ul li:hover span {
-  text-align: left;
-}
-
 .menu:hover .animation {
   opacity: 1;
-  transform: translate(-65px);
+  -webkit-animation: slide 300ms ease;
+          animation: slide 300ms ease;
 }
 
 .menu:hover .fa-check-circle {
   transform: rotate(360deg);
+  opacity: 1;
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+.menu:hover .slide span {
+  margin-right: 75px;
+  transition: margin-right 300ms ease;
+}
+
+@-webkit-keyframes slide {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 65px;
+  }
+}
+
+@keyframes slide {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 65px;
+  }
+}
+/*Cursor*/
+.restaurants__cards:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 600px) and (max-width: 950px) {
+  /*Page d'Acceuil*/
   .restaurants {
     display: flex;
     flex-direction: row;
@@ -716,6 +760,11 @@ footer h1 {
   }
   .restaurants--cards {
     width: 40%;
+  }
+  /*Page des Restaurants*/
+  .background--image img {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (min-width: 950px) {
@@ -858,6 +907,7 @@ footer h1 {
     stroke: white;
   }
   footer {
+    padding-left: 0;
     height: 100px;
   }
   footer h1 {
@@ -874,5 +924,57 @@ footer h1 {
   }
   footer ul li a:hover {
     color: #9356DC;
+  }
+  /*Page des restaurants*/
+  .start, .plate, .dessert {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    background-color: #353535;
+  }
+  .start p, .plate p, .dessert p {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    margin: 0;
+    color: white;
+  }
+  .start .menu, .plate .menu, .dessert .menu {
+    width: 90%;
+    align-items: center;
+    box-shadow: 2px 2px 5px #9356DC;
+  }
+  .start .menu p, .plate .menu p, .dessert .menu p {
+    display: none;
+  }
+  .start .menu h2, .plate .menu h2, .dessert .menu h2 {
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    margin-top: 0;
+  }
+  .btn--restaurants--background {
+    background-color: #353535;
+  }
+  .btn--restaurants--background .btn {
+    box-shadow: none;
+  }
+  .line {
+    display: none;
+  }
+  .header {
+    top: 250px;
+    background-color: #353535;
+  }
+  .header h1 {
+    color: #99E2D0;
+    text-shadow: 1px 1px 5px #FF79DA;
+  }
+  .header svg {
+    stroke: white;
+  }
+  .background--image img {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }/*# sourceMappingURL=main.css.map */

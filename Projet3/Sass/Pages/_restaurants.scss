@@ -1,4 +1,12 @@
 
+header{
+    .logo__restaurant{
+        h1{
+            display: none;
+        }
+    }
+}
+
 .return{
     position: absolute;
     top: 20px;
@@ -14,7 +22,6 @@
         height: 250px;
         width: 100%;
         position: relative;
-        font-weight: bolder;
     }
 }
 
@@ -63,6 +70,7 @@
     padding-top: 30px;
     background-color: #f6f6f6;
     width: 100%;
+    padding-bottom: 10px;
     p{
         position: relative;
         margin-bottom: 5px;
@@ -80,6 +88,13 @@
     }
 }
 
+.plate, .dessert{
+    padding-top: 20px;
+    p{
+        margin-top: 0px;
+    }
+}
+
 .menu{ 
     height: 65px;
     border-radius: 15px;
@@ -88,13 +103,16 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     position: relative;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-bottom: 15px;
     h2{
         margin-left: 10px;
         margin-top: 15px;
         font-weight: bold;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     p{
         grid-column-start: 1;
@@ -103,6 +121,9 @@
         margin-left: 10px;
         margin-top: 5px;
         padding-left: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     .slide{
         grid-column-start: 2;
@@ -117,19 +138,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
+    width: 65px;
     height: 65px;
     border-radius: 0 15px 15px 0;
     position: absolute;
-    right: 80px;
-    opacity: 1;
+    right: 0;
+    opacity: 0;
     top: 0;
     background-color: $tertiary-color;
     span{
-        margin: 0;
         i{
             color: white;
             background-color: $tertiary-color;
+            opacity: 0;
         }
     }
 }

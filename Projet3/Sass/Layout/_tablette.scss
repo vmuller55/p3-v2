@@ -1,4 +1,5 @@
 @media screen and (min-width: 600px) and (max-width: 950px){
+    /*Page d'Acceuil*/
     .restaurants{
         display: flex;
         flex-direction: row;
@@ -9,6 +10,13 @@
         }
         &--cards{
             width: 40%;
+        }
+    }
+    /*Page des Restaurants*/
+
+    .background--image{
+        img{
+            object-fit: cover;
         }
     }
 }

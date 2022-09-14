@@ -236,20 +236,37 @@
   transition: all 300ms ease-in-out;
   text-align: center;
 }
-.menu{
-  ul{
-    li:hover{
-      span{
-        text-align: left;
-      }
+
+.menu:hover .animation{
+  opacity: 1;
+  animation: slide 300ms ease;
+}
+.menu:hover .fa-check-circle{
+  transform: rotate(360deg);
+  opacity: 1;
+}
+.menu:hover{
+  cursor: pointer;
+  .slide{
+    span{
+      margin-right: 75px;
+      transition: margin-right 300ms ease;
     }
   }
 }
 
-.menu:hover .animation{
-  opacity: 1;
-  transform: translate(-65px);
+@keyframes slide{
+  from{
+    width: 0px;
+  }
+  to{
+    width: 65px;
+  }
 }
-.menu:hover .fa-check-circle{
-  transform: rotate(360deg);
+
+/*Cursor*/
+.restaurants{
+  &__cards:hover{
+    cursor: pointer;
+  }
 }

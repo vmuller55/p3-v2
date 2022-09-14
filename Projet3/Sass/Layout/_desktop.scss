@@ -139,6 +139,7 @@
         }
     }
     footer{
+        padding-left: 0;
         height: 100px;
         h1{
             color: $primary-color;
@@ -158,4 +159,61 @@
             }
         }
     }
+
+    /*Page des restaurants*/
+
+    .start, .plate, .dessert{
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        background-color: #353535;
+        p{
+            grid-column-start: 1;
+            grid-row-start: 1;
+            grid-row-end: span 2;
+            margin: 0;
+            color: white;
+        }
+        .menu{
+            width: 90%;
+            align-items: center;
+            box-shadow: 2px 2px 5px $primary-color;
+            p{
+                display: none;
+            }
+            h2{
+                grid-row-start: 1;
+                grid-row-end: span 2;
+                margin-top: 0;
+            }
+        }
+    }
+    .btn--restaurants--background{
+        background-color: #353535;
+        .btn{
+            box-shadow: none;
+        }
+    }
+    .line{
+        display: none;
+    }
+    .header{
+        top: 250px;
+        background-color: #353535;
+        h1{
+            color: $tertiary-color;
+            text-shadow: 1px 1px 5px $secondary-color;
+        }
+        svg{
+            stroke: white;
+        }
+    }
+    .background--image{
+        img{
+            object-fit: cover;
+        }
+    }
+
+
 }
