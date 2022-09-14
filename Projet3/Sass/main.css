@@ -394,6 +394,12 @@ header .logo__restaurant h1 {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
 }
+.restaurants--cards .center img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center -150px;
+     object-position: center -150px;
+}
 .restaurants--cards__new {
   position: absolute;
   background: #99E2D0;
