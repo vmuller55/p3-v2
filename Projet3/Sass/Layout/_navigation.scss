@@ -27,9 +27,9 @@
         margin-bottom: 20px;
         box-shadow: 2px 2px 5px lightgrey;
         img{
+            object-fit: fill;
             height: 175px;
             width: 100%;
-            object-fit: cover;
             border-radius: 20px 20px 0px 0px;
         }
         &__new{
@@ -63,15 +63,17 @@
                 margin-top: 5px;
             }
             svg{
+                overflow: visible;
                 grid-row-start: 1;
                 margin-top: 15px;
                 justify-self: right;
                 grid-row-end: span 3;
-                margin-right: 20px;
+                padding-right: 20px;
                 height: 20px;
                 width: 20px;
                 fill: none;
                 stroke: black;
+                stroke-width: 20px;
                 .color1{
                     stop-color: $primary-color;
                 }

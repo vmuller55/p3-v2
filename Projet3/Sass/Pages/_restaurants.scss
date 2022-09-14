@@ -25,6 +25,12 @@ header{
     }
 }
 
+.image--center{
+    img{
+        object-fit: cover;
+    }
+}
+
 .header{
     border-radius: 35px 35px 0px 0px;
     width: 100%;
@@ -46,6 +52,8 @@ header{
         width: 100%;
     }
     svg{
+        margin-bottom: 5px;
+        overflow: visible;
         grid-column-start: 2;
         justify-self: right;
         margin-right: 40px;
@@ -53,6 +61,7 @@ header{
         width: 20px;
         fill: none;
         stroke: black;
+        stroke-width: 20px;
         .color1{
             stop-color: $primary-color;
         }

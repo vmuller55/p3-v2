@@ -199,6 +199,11 @@ header .logo__restaurant h1 {
   position: relative;
 }
 
+.image--center img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .header {
   border-radius: 35px 35px 0px 0px;
   width: 100%;
@@ -221,6 +226,8 @@ header .logo__restaurant h1 {
   width: 100%;
 }
 .header svg {
+  margin-bottom: 5px;
+  overflow: visible;
   grid-column-start: 2;
   justify-self: right;
   margin-right: 40px;
@@ -228,6 +235,7 @@ header .logo__restaurant h1 {
   width: 20px;
   fill: none;
   stroke: black;
+  stroke-width: 20px;
 }
 .header svg .color1 {
   stop-color: #9356DC;
@@ -380,10 +388,10 @@ header .logo__restaurant h1 {
   box-shadow: 2px 2px 5px lightgrey;
 }
 .restaurants--cards img {
+  -o-object-fit: fill;
+     object-fit: fill;
   height: 175px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
 .restaurants--cards__new {
@@ -418,15 +426,17 @@ header .logo__restaurant h1 {
   margin-top: 5px;
 }
 .restaurants--cards__text svg {
+  overflow: visible;
   grid-row-start: 1;
   margin-top: 15px;
   justify-self: right;
   grid-row-end: span 3;
-  margin-right: 20px;
+  padding-right: 20px;
   height: 20px;
   width: 20px;
   fill: none;
   stroke: black;
+  stroke-width: 20px;
 }
 .restaurants--cards__text svg .color1 {
   stop-color: #9356DC;
@@ -1002,5 +1012,6 @@ footer h1 {
   .background--image img {
     -o-object-fit: cover;
        object-fit: cover;
+    position: center;
   }
 }/*# sourceMappingURL=main.css.map */
