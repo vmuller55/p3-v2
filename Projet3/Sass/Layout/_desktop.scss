@@ -129,12 +129,20 @@
                 margin: 0;
             }
             img{
+                object-fit: cover;
                 border-radius: 25px 25px 0px 0px;
-                height: 90%;
+                height: 730px;
                 width: 100%;
             }
             svg{
                 stroke: white;
+            }
+            .center{
+                img{
+                    height: 730px;
+                    object-fit: cover;
+                    object-position: -100px center;
+                }
             }
         }
     }

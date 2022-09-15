@@ -941,12 +941,21 @@ footer h1 {
     margin: 0;
   }
   .restaurants--cards img {
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 25px 25px 0px 0px;
-    height: 90%;
+    height: 730px;
     width: 100%;
   }
   .restaurants--cards svg {
     stroke: white;
+  }
+  .restaurants--cards .center img {
+    height: 730px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: -100px center;
+       object-position: -100px center;
   }
   footer {
     padding-left: 0;
