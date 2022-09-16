@@ -954,8 +954,8 @@ footer h1 {
     height: 730px;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: -100px center;
-       object-position: -100px center;
+    -o-object-position: initial;
+       object-position: initial;
   }
   footer {
     padding-left: 0;
@@ -1027,6 +1027,5 @@ footer h1 {
   .background--image img {
     -o-object-fit: cover;
        object-fit: cover;
-    position: center;
   }
 }/*# sourceMappingURL=main.css.map */

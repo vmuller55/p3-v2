@@ -141,7 +141,7 @@
                 img{
                     height: 730px;
                     object-fit: cover;
-                    object-position: -100px center;
+                    object-position: initial;
                 }
             }
         }
@@ -220,7 +220,7 @@
     .background--image{
         img{
             object-fit: cover;
-            position: center;
+            
         }
     }
 
